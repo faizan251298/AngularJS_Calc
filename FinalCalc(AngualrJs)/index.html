@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html  ng-app="calculator">
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  -->
+<script src="calc.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script> 
+
+<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+
+<style>
+.calc {
+  background-color: lightgrey;
+  border: 15px solid green;
+  padding: 25px;
+  
+  display: inline-block;
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  
+}
+
+
+
+
+</style>
+</head>
+<body ng-controller="calccontroller" style="background-color:rgb(19, 43, 43);">
+		<center><h1  style="display:inline-block; position:absolute; left:41%; top:20%; color: cyan;"> Angular JS Calculator</h1></center>
+<div class="calc">	
+<table >
+	<tr>
+	<td><p placeholder="Input1" type="number" style="text-align:right; border:2.5px outset;border-color:black; width: 150px;" name="a" ng-model="a">{{a}}</p> </td>
+	<td><p placeholder="Input2" type="number" style=" text-align:right; border:2.5px outset;border-color:black; width: 150px;" name="b" ng-model="b">{{b}}</p> </td>
+</tr>
+
+<!--  <input type="button" value="+" ng-click="f1()"></input>
+<input type="button" value="-" ng-click="f2()"></input>
+<input type="button" value="*" ng-click="f3()"></input>
+<input type="button" value="/" ng-click="f4()"></input> -->
+
+<tr align='right'>
+	<td>
+    	 <button class="btn btn-sm btn-secondary" ng-click="aa(9)" >9</button> 
+		 <button class="btn btn-sm btn-secondary" ng-click="aa(8)" >8</button> 
+		 <button class="btn btn-sm btn-secondary" ng-click="aa(7)">7</button> 
+		 <button class="btn btn-sm btn-secondary" ng-click="aa(6)">6</button> 
+	  
+	  
+
+	</td>	  		 
+	<td>
+			<button class="btn btn-sm btn-secondary" ng-click="bb(9)" >9</button> 
+			<button class="btn btn-sm btn-secondary" ng-click="bb(8)" >8</button> 
+			<button class="btn btn-sm btn-secondary" ng-click="bb(7)">7</button> 
+			<button class="btn btn-sm btn-secondary" ng-click="bb(6)">6</button> 
+				   
+			</td>
+	
+</tr>	
+	 
+<tr align='right'>
+<td>	 
+		<button class="btn btn-sm btn-secondary" ng-click="aa(5)">5</button>  
+	 <button class="btn btn-sm btn-secondary" ng-click="aa(4)">4</button> 
+	 <button class="btn btn-sm btn-secondary" ng-click="aa(3)">3</button> 
+	 <button class="btn btn-sm btn-secondary" ng-click="aa(2)">2</button> 
+	  
+	</td>
+	<td> 
+			<button class="btn btn-sm btn-secondary" ng-click="bb(5)">5</button>  
+		 <button class="btn btn-sm btn-secondary" ng-click="bb(4)">4</button> 
+		 <button class="btn btn-sm btn-secondary" ng-click="bb(3)">3</button> 
+		 <button class="btn btn-sm btn-secondary" ng-click="bb(2)">2</button> 
+	</td>
+</tr>
+	 
+	 <tr align='right'>
+	  <td>
+			<button class="btn btn-sm btn-danger" ng-click="cca()">C</button> 	
+			<button class="btn btn-sm btn-secondary" ng-click="aa(1)">1</button> 
+		<button class="btn btn-sm btn-secondary" ng-click="aa(0)">0</button> 
+	  
+	  
+</td>
+<td>
+		<button class="btn btn-sm btn-danger" ng-click="ccb()">C</button> 	
+		<button class="btn btn-sm btn-secondary" ng-click="bb(1)">1</button> 
+	<button class="btn btn-sm btn-secondary" ng-click="bb(0)">0</button>
+	
+	</td>
+	</tr>
+</table>
+
+<br/>
+<center>	
+	<button class="btn btn-sm btn-primary" ng-click="f1()" >+</button> 
+	  <button class="btn btn-sm btn-primary" ng-click="f2()">-</button> 
+	  <button class="btn btn-sm btn-primary"  ng-click="f3()">*</button>	 
+	  <button class="btn btn-sm btn-primary"  ng-click="f4()">/</button> 
+</center>
+
+<br/>
+
+<center><p style="font-size: 28px;text-align: right;" placeholder="Result" ng-model="result"></p> </center>
+
+</div>
+</body>
+</html>
